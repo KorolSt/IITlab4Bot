@@ -5,7 +5,7 @@ const bot = new Telegraf("5354926949:AAHvq5ieKv_sQfWd5Cv43E7MtwWVtE9Vlkg")
 bot.start((ctx) => ctx.reply('1000-7?'))
 bot.hears(`sf banned`, (ctx) => {
     ctx.reply(`${range}`)
-    range = range - 77
+    range = range - 7
 })
 bot.launch()
 
