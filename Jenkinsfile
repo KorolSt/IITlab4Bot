@@ -6,14 +6,10 @@ pipeline {
   }
   agent any
   stages {
-    stage('Cloning Git') {
-      steps {
-        git 'https://github.com/KorolSt/IITlab4Bot.git'
-      }
-    }
     stage('Building image') {
       steps{
         script {
+		  st = sudo systemctl start docker
           dockerImage = docker.build registry + ":$BUILD_NUMBER"
         }
       }
